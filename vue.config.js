@@ -6,11 +6,11 @@ const pathContext = '/api/*'
 
 module.exports = {
     productionSourceMap: false,
-    configureWebpack: {
-        resolve: {
-            modules: [path.join(__dirname, 'src'), path.join(__dirname, 'node_modules')]
-        }
-    },
+    // configureWebpack: {
+    //     resolve: {
+    //         modules: [path.join(__dirname, 'src'), path.join(__dirname, 'node_modules')]
+    //     }
+    // },
     css: {
         extract: true,
         sourceMap: false
@@ -21,15 +21,15 @@ module.exports = {
      // 配置
     chainWebpack: (config) => {
         // 配置别名
-        config.resolve.alias
-            .set('@', resolve('src'))
-            .set('assets',resolve('src/assets'))
-            .set('components',resolve('src/components'))
-            .set('router',resolve('src/router'))
-            .set('utils',resolve('src/utils'))
-            .set('static',resolve('src/static'))
-            .set('store',resolve('src/store'))
-            .set('views',resolve('src/views'));
+        // config.resolve.alias
+        //     .set('@', resolve('src'))
+        //     .set('assets',resolve('src/assets'))
+        //     .set('components',resolve('src/components'))
+        //     .set('router',resolve('src/router'))
+        //     .set('utils',resolve('src/utils'))
+        //     .set('static',resolve('src/static'))
+        //     .set('store',resolve('src/store'))
+        //     .set('views',resolve('src/views'));
 
          // 压缩代码
         config.optimization.minimize(true);
