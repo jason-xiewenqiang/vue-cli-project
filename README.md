@@ -1,5 +1,10 @@
 # vue-project
 
+## MARK ------ 一些关于vue组件化的练习
+
+    + 目录 ./src/components 
+    + 目录 ./src/utils 
+
 ## Project setup
 ```
 npm install
