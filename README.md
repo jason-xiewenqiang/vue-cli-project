@@ -4,6 +4,7 @@
 
     + 目录 ./src/components 
     + 目录 ./src/utils 
+    + 目录 ./src/mixins 
 
 ## Project setup
 ```
