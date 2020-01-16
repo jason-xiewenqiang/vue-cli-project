@@ -13,8 +13,10 @@
     <button @click="handleReset">重置</button>
     <hr />
     <i-checkbox v-model="checkbox">I-Checkbox</i-checkbox>
-    <hr>
-    <i-tree :data='data' :showCheckbox='true'></i-tree>
+    <hr />
+    <i-tree :data="data" :showCheckbox="true"></i-tree>
+    <hr />
+    <button @click="handleOpen1">打开提示 1</button>
   </div>
 </template>
 <script>
@@ -22,7 +24,7 @@ import iForm from "../components/IForm.vue";
 import iFormItem from "../components/IFormItem.vue";
 import iInput from "../components/IInput.vue";
 import iCheckbox from "../components/ICheckbox.vue";
-import iTree from '../components/ITree.vue'
+import iTree from "../components/ITree.vue";
 
 export default {
   components: { iForm, iFormItem, iInput, iCheckbox, iTree },
@@ -85,6 +87,11 @@ export default {
     },
     handleReset() {
       this.$refs.form.resetFields();
+    },
+    handleOpen1() {
+      this.$Alert.info({
+        content: "我是提示信息 1"
+      });
     }
   }
 };

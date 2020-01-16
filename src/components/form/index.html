@@ -1,0 +1,66 @@
+<html>
+	<head>
+		<script type="text/javascript" src="https://cdn.bootcss.com/axios/0.19.0-beta.1/axios.min.js"></script>
+		<!-- import Vue.js -->
+		<script src="https://unpkg.com/vue-router@2.0.0/dist/vue-router.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+		<!-- import element -->
+		<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+		<!-- import stylesheet -->
+		<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+		<!-- import stylesheet -->
+		<link rel="stylesheet" href="./css/common.css">
+		<link rel="stylesheet" href="./css/index.css">
+		<!-- import form-create/element -->
+		<script src="https://unpkg.com/form-create/dist/form-create.elm.min.js"></script>
+		<script src="./component/menu.js"></script>
+		<script src="./component/formCreate.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<el-container>
+				<el-header>
+					Header
+				</el-header>
+				<el-container>
+				  <el-aside width="200px">
+					<c-menu/>
+				  </el-aside>
+				  <el-main>
+					<el-button @click="drawer = true" type="primary" style="margin-left: 16px;">
+						点我打开
+					  </el-button>
+				  </el-main>
+				</el-container>
+			  </el-container>
+			  <el-drawer
+					title="我是标题"
+					:visible.sync="drawer"
+					:direction="direction"
+					:before-close="handleClose">
+					<form-create/>
+			 </el-drawer>
+		</div>
+		<script type="text/javascript">
+			var vm = new Vue({
+				el: '#app',
+				component: ['c-menu', 'form-create'],
+				data: {
+					test: 'test',
+					drawer: false,
+					direction: 'rtl',
+				},
+				methods: {
+					handleClose(done) {
+								done();
+						// this.$confirm('确认关闭？')
+						// 	.then(_ => {
+						// 	})
+						// 	.catch(_ => {});
+					}
+				}
+			})
+		</script>
+	</body>
+</html>
+
