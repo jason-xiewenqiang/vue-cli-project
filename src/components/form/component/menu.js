@@ -12,28 +12,18 @@ Vue.component('c-menu',{
             background-color="#545c64"
             text-color="#fff"
             active-text-color="#ffd04b">
-                <el-menu-item index="2">
-                    <i class="el-icon-menu"></i>
-                    <span slot="title">导航二</span>
-                </el-menu-item>
-
-                </el-menu-item>
-                <el-menu-item index="4">
-                    <i class="el-icon-setting"></i>
-                    <span slot="title">导航四</span>
-                </el-menu-item>
-                <el-menu-item index="1">
-                    <i class="el-icon-setting"></i>
-                    <span slot="title">导航四</span>
-                </el-menu-item>
-                <el-menu-item index="3">
-                    <i class="el-icon-setting"></i>
-                    <span slot="title">导航四</span>
-                </el-menu-item>
-                <el-menu-item index="5">
-                    <i class="el-icon-setting"></i>
-                    <span slot="title">导航四</span>
-                </el-menu-item>
+                <router-link to='/c-view'>
+                    <el-menu-item index="2">
+                        <i class="el-icon-menu"></i>
+                        <span slot="title">view</span>
+                    </el-menu-item>
+                </router-link>
+                <router-link to='/c-main'>
+                    <el-menu-item index="3">
+                        <i class="el-icon-menu"></i>
+                        <span slot="title">main</span>
+                    </el-menu-item>
+                </router-link>
              </el-menu>
         </div>
     `,
